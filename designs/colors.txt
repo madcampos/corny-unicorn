@@ -1,0 +1,6 @@
+Moss green: #4E5B3F
+Grass green: #79981F
+Mint green: #E7F2EC
+Golden yellow: #E6C40E
+Light yellow: #FFF253
+Gradient: #AADC19 -> #0F1D00
