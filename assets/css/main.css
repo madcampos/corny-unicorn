@@ -1,0 +1,141 @@
+:root {
+	--clr--moss-green: #4E5B3F;
+	--clr--grass-green: #79981F;
+	--clr--mint-green: #E7F2EC;
+	--clr--golden-yellow: #E6C40E;
+	--clr--light-yellow: #FFF253;
+	--clr--gradient: linear-gradient(to bottom, #AADC19, #0F1D00);
+
+	--sizes-logo-size: 6rem;
+	--size-border: 0.2rem;
+	--size-border-radius: 0.5rem;
+
+	font-family: 'Comic Sans MS', fantasy, serif;
+	font-size: 20px;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	font-family: inherit;
+}
+
+button, input, textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	background-color: var(--clr--mint-green);
+	color: var(--clr--moss-green);
+}
+
+#skip-to-main-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	height: 1px;
+	width: 1px;
+	font-size: 1px;
+	color: transparent;
+	opacity: 0;
+	overflow: hidden;
+	pointer-events: none;
+	display: block;
+	text-align: center;
+	clip-path: inset(0);
+}
+
+#skip-to-main-link:focus {
+	z-index: 1;
+	width: auto;
+	height: auto;
+	font-size: 1rem;
+	color: currentColor;
+	opacity: 1;
+	padding: 0.5rem;
+	pointer-events: auto;
+	background-color: white;
+	clip-path: none;
+}
+
+nav {
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: var(--clr--grass-green) var(--size-border) solid;
+	padding-inline: 1rem;
+}
+
+a:has(img) {
+	width: var(--sizes-logo-size);
+	height: calc(var(--sizes-logo-size) * 0.5);
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	gap: 1rem;
+	margin: 0;
+	padding: 0;
+}
+
+nav a {
+	color: var(--clr--moss-green);
+}
+
+main {
+	display: flex;
+	padding-block-start: calc((var(--sizes-logo-size) * 0.5) + 1rem);
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+main img {
+	width: 14rem;
+}
+
+main h1 {
+	background: var(--clr--gradient);
+	-webkit-background-clip: text;
+	color: transparent;
+}
+
+main p {
+	margin: 0;
+	color: var(--clr--grass-green);
+}
+
+.cta {
+	display: inline-block;
+	padding: 0.2rem 0.5rem;
+	border: var(--clr--moss-green) var(--size-border) solid;
+	text-decoration: none;
+	color: var(--clr--moss-green);
+	margin: 1rem;
+	border-radius: var(--size-border-radius);
+}
+
+.cta:hover {
+	background-color: var(--clr--moss-green);
+	color: white;
+	text-decoration: underline;
+}
+
+.cta:focus {
+	outline: var(--clr--golden-yellow) var(--size-border) solid;
+	outline-offset: var(--size-border);
+	background-color: var(--clr--golden-yellow);
+	color: var(--clr--moss-green);
+	text-decoration: underline;
+	border-color: transparent;
+}
