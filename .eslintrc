@@ -196,7 +196,7 @@
 				"min": 3,
 				"max": 50,
 				"properties": "never",
-				"exceptions": ["i", "j", "n", "w", "x", "y", "z", "id", "fs", "up", "_", "t"]
+				"exceptions": ["i", "j", "n", "w", "x", "y", "z", "id", "fs", "up", "_", "t", "db"]
 			}
 		],
 		"id-match": "off",
