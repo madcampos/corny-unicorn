@@ -28,4 +28,8 @@ app.patch('/api/unicorns/:id', async (context) => updateUnicorn(context, db));
 
 // CRUD => appointments
 
-serve(app);
+serve({
+	fetch: app.fetch,
+	port: 3000,
+	hostname: 'localhost'
+});
