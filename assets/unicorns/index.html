@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Unicorn Menagerie</title>
+
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+	<header>
+		<a id="skip-to-main-link" href="#main">Skip to main content</a>
+
+		<nav>
+			<a href="/">
+				<img src="/images/logo-circle.svg" alt="Logo of a white unicorn with a green mane and a corn for a horn.">
+			</a>
+
+			<ul>
+				<li><a href="/unicorns" id="current-page">Unicorns</a></li>
+				<li><a href="/vet-services">Vet. Services</a></li>
+				<li><a href="/stables">Our Stables</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="unicorns-list">
+		<h1>Unicorn Menagerie</h1>
+
+		<template id="unicorn-card-template">
+			<article class="unicorn-card">
+				<img src="" alt="">
+
+				<div>
+					<h2></h2>
+					<button type="button">See details</button>
+				</div>
+			</article>
+		</template>
+	</main>
+
+	<dialog id="unicorn-details">
+		<header>
+			<h2 id="unicorn-details-name"></h2>
+			<button type="button" id="close-button">Close</button>
+		</header>
+
+		<img src="" alt="" id="unicorn-details-image">
+		<section>
+			<h3>Details</h3>
+			<dl>
+				<div>
+					<dt>Type:</dt>
+					<dd id="unicorn-details-type"></dd>
+				</div>
+
+				<div>
+					<dt>Size:</dt>
+					<dd id="unicorn-details-size"></dd>
+				</div>
+
+				<div>
+					<dt>Birthday:</dt>
+					<dd id="unicorn-details-birthday"></dd>
+				</div>
+
+				<div>
+					<dt>Favourite colour:</dt>
+					<dd id="unicorn-details-favorite_color"></dd>
+				</div>
+
+				<div>
+					<dt>Horse Power:</dt>
+					<dd id="unicorn-details-horse_power"></dd>
+				</div>
+
+				<div>
+					<dt>Cuteness:</dt>
+					<dd id="unicorn-details-cuteness"></dd>
+				</div>
+
+				<div>
+					<dt>Magic:</dt>
+					<dd id="unicorn-details-magic"></dd>
+				</div>
+			</dl>
+		</section>
+		<article id="unicorn-details-description"></article>
+
+		<footer>
+			<button type="button" id="unicorn-details-adopt-button">Adopt</button>
+			<p hidden id="unicorn-details-adopted-by">Adopted by: </p>
+		</footer>
+	</dialog>
+
+	<script type="module" src="/js/unicorns.js"></script>
+</body>
+</html>
