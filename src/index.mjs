@@ -10,7 +10,8 @@ const db = knex({
 	client: 'sqlite3',
 	connection: {
 		filename: './db/db.sqlite'
-	}
+	},
+	useNullAsDefault: true
 });
 
 //Static files
@@ -28,8 +29,14 @@ app.patch('/api/unicorns/:id', async (context) => updateUnicorn(context, db));
 
 // CRUD => appointments
 
+const HOST = 'localhost';
+const PORT = 3000;
+
 serve({
 	fetch: app.fetch,
-	port: 3000,
-	hostname: 'localhost'
+	port: PORT,
+	hostname: HOST
+}).on('listening', () => {
+	// eslint-disable-next-line no-console
+	console.info(`Server is listening on http://${HOST}:${PORT}`);
 });

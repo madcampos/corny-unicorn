@@ -81,7 +81,7 @@ export async function getUnicorn(context, db) {
  * @param {import('knex').Knex} db
  */
 export async function updateUnicorn(context, db) {
-	const possibleUnicorn = context.req.body;
+	const possibleUnicorn = await context.req.parseBody();
 
 	try {
 		validateUnicorn(possibleUnicorn);
@@ -104,7 +104,7 @@ export async function updateUnicorn(context, db) {
  * @param {import('knex').Knex} db
  */
 export async function createUnicorn(context, db) {
-	const possibleUnicorn = context.req.body;
+	const possibleUnicorn = await context.req.parseBody();
 
 	try {
 		validateUnicorn(possibleUnicorn);
