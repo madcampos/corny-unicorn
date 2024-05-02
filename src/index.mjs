@@ -30,7 +30,7 @@ app.patch('/api/unicorns/:id', async (context) => updateUnicorn(context, db));
 // CRUD => appointments
 
 const HOST = 'localhost';
-const PORT = 3000;
+const PORT = 3001;
 
 serve({
 	fetch: app.fetch,
