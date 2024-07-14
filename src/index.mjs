@@ -29,14 +29,12 @@ app.patch('/api/unicorns/:id', async (context) => updateUnicorn(context, db));
 
 // CRUD => appointments
 
-const HOST = 'localhost';
 const PORT = 3001;
 
 serve({
 	fetch: app.fetch,
-	port: PORT,
-	hostname: HOST
+	port: PORT
 }).on('listening', () => {
 	// eslint-disable-next-line no-console
-	console.info(`Server is listening on http://${HOST}:${PORT}`);
+	console.info(`Server is listening on port: ${PORT}`);
 });
