@@ -1,34 +1,37 @@
 {
-  "name": "corny-unicorn",
-  "version": "1.0.0",
-  "private": true,
-  "description": "A unicorn adoption website",
-  "main": "src/index.mjs",
-  "author": "madcampos",
-  "license": "ISC",
-  "type": "module",
-  "scripts": {
-    "start": "node src/index.mjs",
-    "lint": "eslint . --ext .js,.mjs,.ts,.mts --fix --ignore-path .gitignore",
-    "typecheck": "tsc --noEmit"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "volta": {
-    "node": "20.9.0"
-  },
-  "devDependencies": {
-    "@types/node": "^20.12.8",
-    "@typescript-eslint/eslint-plugin": "^7.8.0",
-    "@typescript-eslint/parser": "^7.8.0",
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.5"
-  },
-  "dependencies": {
-    "@hono/node-server": "^1.11.1",
-    "hono": "^4.2.9",
-    "knex": "^3.1.0",
-    "sqlite3": "^5.1.7"
-  }
+	"name": "corny-unicorn",
+	"version": "1.0.0",
+	"private": true,
+	"description": "A unicorn adoption website",
+	"main": "src/index.mjs",
+	"author": "madcampos",
+	"license": "ISC",
+	"type": "module",
+	"scripts": {
+		"start": "node src/index.mjs",
+		"lint": "eslint src --fix",
+		"typecheck": "tsc --noEmit"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"volta": {
+		"node": "22.7.0"
+	},
+	"devDependencies": {
+		"@types/node": "^22.5.0",
+		"@typescript-eslint/eslint-plugin": "^8.3.0",
+		"@typescript-eslint/parser": "^8.3.0",
+		"eslint": "^9.9.1",
+		"typescript": "^5.5.4"
+	},
+	"dependencies": {
+		"@hono/node-server": "^1.12.1",
+		"hono": "^4.5.9",
+		"knex": "^3.1.0",
+		"sqlite3": "^5.1.7"
+	},
+	"overrides": {
+		"is-core-module": "npm:@nolyfill/is-core-module@^1"
+	}
 }
