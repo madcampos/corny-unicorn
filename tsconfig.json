@@ -33,6 +33,6 @@
 		"skipLibCheck": true,
 		"newLine": "LF",
 		"composite": true,
-		"incremental": true,
+		"incremental": true
 	}
 }

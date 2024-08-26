@@ -14,7 +14,7 @@ const db = knex({
 	useNullAsDefault: true
 });
 
-//Static files
+// Static files
 app.use('/*', serveStatic({ root: './assets' }));
 
 // API routes
