@@ -27,7 +27,7 @@
 	},
 	"dependencies": {
 		"@hono/node-server": "^1.12.1",
-		"hono": "^4.5.9",
+		"hono": "^4.10.2",
 		"knex": "^3.1.0",
 		"sqlite3": "^5.1.7"
 	},
