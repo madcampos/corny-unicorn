@@ -1,0 +1,38 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "corny-unicorn",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-07-26",
+	"compatibility_flags": ["nodejs_compat"],
+	"keep_vars": false,
+	"send_metrics": false,
+	"preserve_file_names": true,
+	"minify": true,
+	"workers_dev": false,
+	"preview_urls": false,
+	"route": { "pattern": "corny-unicorn.madcampos.dev", "custom_domain": true },
+	"dev": {
+		"ip": "localhost",
+		"port": 4321,
+		"local_protocol": "https",
+		"upstream_protocol": "https"
+	},
+	"assets": {
+		"directory": "./public",
+		"binding": "Assets",
+		"run_worker_first": ["/api/*"],
+		"html_handling": "auto-trailing-slash",
+		"not_found_handling": "404-page"
+	},
+	"d1_databases": [
+		{
+			"binding": "Database",
+			"database_name": "corny-unicorn-db",
+			"database_id": "",
+			"preview_database_id": "corny-unicorn-db",
+			"migrations_dir": "db/migrations",
+			"migrations_table": "migrations"
+		}
+	],
+	"vars": { "NODE_ENV": "production" }
+}
