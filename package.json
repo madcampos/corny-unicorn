@@ -19,11 +19,11 @@
 		"node": "22.7.0"
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^8.58.0",
-		"@typescript-eslint/parser": "^8.58.0",
-		"eslint": "^10.2.0",
+		"@typescript-eslint/eslint-plugin": "^8.60.0",
+		"@typescript-eslint/parser": "^8.60.0",
+		"eslint": "^10.4.0",
 		"typescript": "^6.0.2",
-		"wrangler": "4.81.1"
+		"wrangler": "4.95.0"
 	},
 	"dependencies": {
 		"hono": "^4.12.21"
